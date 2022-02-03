@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins&display=swap');
+
+html, body {
+    overflow-x: hidden;
+    height: 100vh;
+    background: #17202e;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+.navbar {
+    background: #131924;
+    color: #fff
+}
+
+.global-stat {
+    background: #202a3b;
+    margin-right: 6px;
+    margin-bottom: 3px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 35px;
+}
+
+.country-data {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .country-row {
+     transition: .25s;
+     margin-bottom: 4px;
+     background: #202a3b;
+     margin: 10px 15px;
+     border-radius: 10px;
+  }
+
+ .country-name {
+     text-transform: uppercase;
+     color: #fff;
+ }
+
+ .flag img {
+     width: 45px;
+     height: 45px;
+     border-radius: 50%;
+ }
+
+ .case-stats {
+     /* text-align: center; */
+ }
+
+ .headings {
+     color: #fff;
+ }
+
+ .deaths {
+     color: red;
+ }
+
+ .recovery {
+     color: green;
+ }
+
+ .cases {
+      color: #ffef00
+}
