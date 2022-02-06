@@ -1,6 +1,8 @@
 <template>
-  <Header />
-  <Home />
+  
+    <Header />
+    <Home />
+  
 </template>
 
 <script>
@@ -13,14 +15,12 @@ export default {
   components: {
     Home,
     Header
+  },
+  data() {
+    return {
+      loading: false
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-</style>

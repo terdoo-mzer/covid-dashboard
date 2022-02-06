@@ -1,11 +1,11 @@
 <template >
   <div>
     <div id="search-container">
-      <input id="" placeholder="Search Country">
+      <input id="search" v-model="search" placeholder="Search Country">
     </div>
       
        <div class="country-data ">
-        <div class="country-row row" v-for="(country,index) in countryDetails" :key="index">
+        <div class="country-row row" v-for="(country,index) in searchCountry" :key="index">
              <div class="flag col-3"><img :src="country.countryInfo.flag" :alt="country.country"></div>
              <div class="country-info col-9">
                 <div class="country-name">{{ numberWithCommas(country.country) }}</div>
@@ -47,15 +47,35 @@
 export default {
   name: 'CountryData',
   props: ['countryDetails'],
+ 
  data () {
-    return {}
+    return {
+       search: '',
+    }
   },
   methods: {
     numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     } 
-  } 
+  } ,
+  computed: {
+    searchCountry() {
+      let searchedCountry = this.countryDetails
+
+      if(this.search) {
+          searchedCountry = searchedCountry.filter((country) => {
+            return country.country
+            .toUpperCase()
+            .includes(this.search.toUpperCase())
+          })
+      } 
+      console.log(this.search)
+      console.log(searchedCountry)
+      return searchedCountry
+    }
+  }
 }
+
 </script>
 
 <style scoped>

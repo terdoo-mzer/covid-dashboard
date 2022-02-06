@@ -1,6 +1,6 @@
 <template>
 <main class="row">
-  <div class="col-sm-5"><CountryData :countryDetails="CountryStats" /></div>
+  <div class="col-sm-5"> <CountryData :countryDetails="CountryStats" /></div>
   <div class="col-sm-7"><GlobalData :globaData="globData" /></div>
 </main>
 </template>
@@ -42,7 +42,7 @@ export default {
      const countryData = data.at(1)
      this.globData = globalData
      this.CountryStats = countryData
-  }
+  },
 } 
 </script>
 
